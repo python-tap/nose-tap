@@ -54,7 +54,7 @@ if __name__ == '__main__':
         long_description=long_description,
         packages=find_packages(),
         entry_points={
-            'nose.plugins.0.10': ['tap = nose_tap:TAP'],
+            'nose.plugins.0.10': ['tap = nose_tap.plugin:TAP'],
         },
         include_package_data=True,
         zip_safe=False,
