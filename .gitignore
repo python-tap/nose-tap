@@ -89,3 +89,6 @@ ENV/
 
 # Vim
 *.sw*
+
+# TAP
+*.tap
