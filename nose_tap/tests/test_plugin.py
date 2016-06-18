@@ -27,7 +27,7 @@ class FakeOptions(object):
 class FakeTestCase(object):
 
     def __call__(self):
-        pass
+        pass  # pragma: no cover
 
 
 class TestPlugin(unittest.TestCase):
@@ -60,7 +60,7 @@ class TestPlugin(unittest.TestCase):
                 FakeTestCase()), (unittest.SkipTest, 'a reason', None))
             line = plugin.tracker._test_cases['FakeTestCase'][0]
             self.assertEqual(line.directive.text, 'SKIP a reason')
-        except AttributeError:
+        except AttributeError:  # pragma: no cover
             self.assertTrue(
                 True, 'Pass because this Python does not support SkipTest.')
 
