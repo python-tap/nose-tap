@@ -12,10 +12,10 @@ except ImportError:  # pragma: no cover
 
 from nose.plugins import Plugin
 from nose.suite import ContextSuite
-
 from tap import formatter
-from tap.i18n import _
 from tap.tracker import Tracker
+
+from nose_tap.i18n import _
 
 
 class DummyStream(object):
