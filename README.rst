@@ -1,7 +1,7 @@
 nose-tap
 ==========
 
-|version| |license| |downloads| |travis| |travisosx| |appveyor| |coverage|
+|version| |license| |travis| |travisosx| |appveyor| |coverage|
 
 .. |version| image:: https://img.shields.io/pypi/v/nose-tap.svg
     :target: https://pypi.python.org/pypi/nose-tap
