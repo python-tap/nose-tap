@@ -1,4 +1,4 @@
-# Copyright (c) 2016, Matt Layman
+# Copyright (c) 2017, Matt Layman
 """
 nose-tap is a reporting plugin for nose that outputs
 `Test Anything Protocol (TAP) <http://testanything.org/>`_ data.
