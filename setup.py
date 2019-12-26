@@ -23,7 +23,7 @@ class BuildPy(build_py):
     def run(self):
         # Babel fails hard on Python 3. Let Python 2 make the mo files.
         if sys.version_info < (3, 0, 0):
-            self.run_command('compile_catalog')
+            self.run_command("compile_catalog")
         # build_py is an old style class so super cannot be used.
         build_py.run(self)
 
@@ -32,56 +32,44 @@ class Sdist(sdist):
     """Custom ``sdist`` command to ensure that mo files are always created."""
 
     def run(self):
-        self.run_command('compile_catalog')
+        self.run_command("compile_catalog")
         # sdist is an old style class so super cannot be used.
         sdist.run(self)
 
 
-if __name__ == '__main__':
-    with open('docs/releases.rst', 'r') as f:
+if __name__ == "__main__":
+    with open("docs/releases.rst", "r") as f:
         releases = f.read()
 
-    long_description = __doc__ + '\n\n' + releases
+    long_description = __doc__ + "\n\n" + releases
 
     setup(
-        name='nose-tap',
+        name="nose-tap",
         version=nose_tap.__version__,
-        url='https://github.com/python-tap/nose-tap',
-        license='BSD',
-        author='Matt Layman',
-        author_email='matthewlayman@gmail.com',
-        description='Test Anything Protocol (TAP) reporting plugin for nose',
+        url="https://github.com/python-tap/nose-tap",
+        license="BSD",
+        author="Matt Layman",
+        author_email="matthewlayman@gmail.com",
+        description="Test Anything Protocol (TAP) reporting plugin for nose",
         long_description=long_description,
         packages=find_packages(),
-        entry_points={
-            'nose.plugins.0.10': ['tap = nose_tap.plugin:TAP'],
-        },
+        entry_points={"nose.plugins.0.10": ["tap = nose_tap.plugin:TAP"]},
         include_package_data=True,
         zip_safe=False,
-        platforms='any',
-        install_requires=[
-            'nose',
-            'tap.py',
-        ],
+        platforms="any",
+        install_requires=["nose", "tap.py<3.0"],
         classifiers=[
-            'Development Status :: 5 - Production/Stable',
-            'Intended Audience :: Developers',
-            'License :: OSI Approved :: BSD License',
-            'Operating System :: OS Independent',
-            'Programming Language :: Python :: 2.7',
-            'Programming Language :: Python :: 3.3',
-            'Programming Language :: Python :: 3.4',
-            'Programming Language :: Python :: 3.5',
-            'Programming Language :: Python :: Implementation :: PyPy',
-            'Topic :: Software Development :: Testing',
+            "Development Status :: 5 - Production/Stable",
+            "Intended Audience :: Developers",
+            "License :: OSI Approved :: BSD License",
+            "Operating System :: OS Independent",
+            "Programming Language :: Python :: 2.7",
+            "Programming Language :: Python :: 3.5",
+            "Programming Language :: Python :: 3.6",
+            "Programming Language :: Python :: 3.7",
+            "Programming Language :: Python :: Implementation :: PyPy",
+            "Topic :: Software Development :: Testing",
         ],
-        keywords=[
-            'TAP',
-            'unittest',
-            'nose',
-        ],
-        cmdclass={
-            'build_py': BuildPy,
-            'sdist': Sdist,
-        }
+        keywords=["TAP", "unittest", "nose"],
+        cmdclass={"build_py": BuildPy, "sdist": Sdist},
     )
