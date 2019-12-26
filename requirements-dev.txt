@@ -5,3 +5,4 @@ mock
 requests
 tox
 twine
+wheel
