@@ -2,11 +2,8 @@
 
 import sys
 import unittest
+from unittest import mock
 
-try:
-    from unittest import mock
-except ImportError:
-    import mock
 # There is some weird conflict with `TestLoader.discover` if `nose.case.Test`
 # is imported directly. Importing `nose.case` works.
 from nose import case
