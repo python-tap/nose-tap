@@ -1,6 +1,11 @@
 Releases
 ========
 
+Version 3.0, Released February 10, 2020
+---------------------------------------
+
+* Drop support for Python 2.
+
 Version 2.0, Released December 26, 2019
 ---------------------------------------
 
