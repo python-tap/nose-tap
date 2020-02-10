@@ -3,12 +3,7 @@
 import os
 import sys
 
-try:
-    from unittest import SkipTest
-except ImportError:  # pragma: no cover
-    class SkipTest(object):
-        """SkipTest does not exist earlier than Python 2.7"""
-        pass
+from unittest import SkipTest
 
 from nose.plugins import Plugin
 from nose.suite import ContextSuite

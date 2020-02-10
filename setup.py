@@ -57,7 +57,7 @@ if __name__ == "__main__":
         include_package_data=True,
         zip_safe=False,
         platforms="any",
-        install_requires=["nose", "tap.py<3.0"],
+        install_requires=["nose", "tap.py"],
         classifiers=[
             "Development Status :: 5 - Production/Stable",
             "Intended Audience :: Developers",
