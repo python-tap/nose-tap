@@ -9,8 +9,7 @@ Developer documentation is on
 `Read the Docs <https://tappy.readthedocs.io/>`_.
 """
 
-from setuptools import find_packages, setup
-from setuptools.command import Command
+from setuptools import Command, find_packages, setup
 
 import nose_tap
 
